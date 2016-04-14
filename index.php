@@ -1,4 +1,10 @@
-<?php require_once 'partials/header.php'; ?>
+<?php
+require_once 'partials/header.php';
+
+$query = $db->prepare('SELECT * FROM project ORDER BY date DESC');
+$query->execute();
+$projects = $query->fetchAll();
+?>
 
 	<!-- Header Welcome Section -->
 	<header id="welcome">
