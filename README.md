@@ -67,6 +67,7 @@ SUPER BONUS
 	- desc
 	- date
 	- sort
+
 	Alimenter la table ``picture`` en associant plusieurs images à un projet.
 	Pour chaque projet, récupérer les images associées depuis la table picture (avec ou sans jointure).
 
