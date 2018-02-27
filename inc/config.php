@@ -1,7 +1,7 @@
 <?php
 define('HOST', 'localhost');
 define('USER', 'root');
-define('PASS', 'kilomi');
+define('PASS', '');
 define('DB', 'portfolio');
 
 setlocale(LC_TIME, 'fr_FR', 'fra');
