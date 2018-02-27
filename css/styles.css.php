@@ -1,3 +1,8 @@
+<?php
+header('Content-type: text/css');
+require_once '../inc/config.php';
+
+?>
 body {
     overflow-x: hidden;
 }
@@ -16,7 +21,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: <?= $primary_color ?>;
 }
 
 h1,
@@ -57,15 +62,15 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: <?= $primary_color ?>;
 }
 
 hr.star-primary {
-    border-color: #2c3e50;
+    border-color: <?= $secondary_color ?>;
 }
 
 hr.star-primary:after {
-    color: #2c3e50;
+    color: <?= $secondary_color ?>;
     background-color: #fff;
 }
 
@@ -76,7 +81,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: <?= $primary_color ?>;
 }
 
 header .container {
@@ -92,7 +97,7 @@ header img {
 header #img-header {
     padding: 30px;
     border-radius: 50%;
-    background-color: #2c3e50;
+    background-color: <?= $secondary_color ?>;
 }
 
 header .intro-text .name {
@@ -181,7 +186,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: <?= $primary_color ?>;
 }
 
 section.success a,
@@ -190,7 +195,7 @@ section.success a:focus,
 section.success a:active,
 section.success a.active {
     outline: 0;
-    color: #2c3e50;
+    color: <?= $secondary_color ?>;
 }
 
 @media(max-width:767px) {
@@ -274,7 +279,7 @@ section.success a.active {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: <?= $primary_color ?>;
     background: #fff;
 }
 
@@ -327,7 +332,7 @@ section.success a.active {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: <?= $primary_color ?>;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -344,7 +349,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #2c3e50;
+    background-color: <?= $secondary_color ?>;
 }
 
 footer .footer-col {
@@ -410,7 +415,8 @@ footer .footer-below {
     font-size: 3em;
 }
 
-.portfolio-modal .modal-content img.modal-picture {
+.portfolio-modal .modal-content img.modal-picture,
+.portfolio-modal .modal-content .carousel.slide {
     margin-bottom: 30px;
 }
 
@@ -437,7 +443,7 @@ footer .footer-below {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #2c3e50;
+    background-color: <?= $secondary_color ?>;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -447,7 +453,7 @@ footer .footer-below {
     z-index: 1052;
     width: 1px;
     height: 75px;
-    background-color: #2c3e50;
+    background-color: <?= $secondary_color ?>;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);

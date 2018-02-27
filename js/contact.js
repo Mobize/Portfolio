@@ -56,8 +56,6 @@ $(function() {
                 cache: false,
                 success: function(result) {
 
-                    $("#btnSubmit").attr("disabled", false);
-
                     if (typeof(result.errors) !== 'undefined' && Object.keys(result.errors).length > 0) {
                         for(var i in result.errors) {
                             $('#form-contact #'+i).next('.help-block.text-danger').html(result.errors[i]);
@@ -66,18 +64,18 @@ $(function() {
                         return false;
                     }
 
-                    if (typeof(result.status) !== 'undefined' && result.status === true) {
-                        contact.displaySuccess("<strong>Votre message a été envoyé</strong>");
-                    }
+                    // Enable button & show success message
+                    $("#btnSubmit").attr("disabled", false);
+                    contact.displaySuccess("<strong>Votre message a été envoyé</strong>");
 
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#form-contact').trigger("reset");
                 },
                 error: function() {
                     // Fail message
                     contact.displayError("<strong>Désolé " + firstName + ", il semble que le serveur ne réponde pas, merci de réessayer ultérieurement!");
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#form-contact').trigger("reset");
                 },
             })
         },
