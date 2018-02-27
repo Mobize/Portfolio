@@ -52,23 +52,9 @@ BONUS
 1. Faire un script qui insert automatiquement 20 projets en bdd, avec du contenu générique (lorem ipsum..etc).
 > **CONSEIL** : Utiliser lipsum.com pour générer des paragraphes en latin, puis à partir de chaque paragraphe, utiliser la fonction substr() pour définir les différentes variables (author, title, content,...etc)
 
-2. Dans la config, créer des variables pour le titre du site, la couleur principale ainsi que la couleur secondaire.
+2. Au clic sur un projet, charger le contenu de la modal en ajax
+
+3. Dans la config, créer des variables pour le titre du site, la couleur principale ainsi que la couleur secondaire.
 Utiliser ces variables pour personnaliser le site.
 
-----------
-SUPER BONUS
--------
 
-1. Créer une table ``picture`` avec les colonnes suivantes :
-	- id
-	- project_id
-	- src
-	- alt
-	- desc
-	- date
-	- sort
-
-	Alimenter la table ``picture`` en associant plusieurs images à un projet.
-	Pour chaque projet, récupérer les images associées depuis la table picture (avec ou sans jointure).
-
-2. Au clic sur un projet, charger le contenu de la modal en ajax
